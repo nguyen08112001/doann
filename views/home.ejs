@@ -1,0 +1,62 @@
+<%- include ('layouts/header') -%>
+    <!-- home section starts  -->
+    <section class="home" id="home">
+
+        <div class="swiper-container home-slider">
+
+            <div class="swiper-wrapper wrapper">
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Do quiz</span>
+                        <h3>Number quiz</h3>
+                        <p>Let's do some number quiz!!!!!</p>
+                        <a href="/quiz/number" class="btn">do quiz now</a>
+                    </div>
+                    <div class="image">
+                        <img src="/images/pngwing.com.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- dishes section starts  -->
+
+    <section class="quiz" id="quiz">
+
+        <h3 class="sub-heading"> Our quiz </h3>
+        <h1 class="heading"> some popular quizes </h1>
+
+        <div class="box-container">
+            <% for(let i=0;i< 8; i++){%>
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/PhucNguyen1905/RestaurantPOS/main/images/<%= rows[i].image %>" alt="">
+                    <h3>
+                        <%= rows[i].name %>
+                    </h3>
+                    <a href="/quiz/<%= rows[i].id %>" class="btn">do quiz now</a>
+                </div>
+                <%};  %>
+
+        </div>
+
+    </section>
+
+    <!-- dishes section ends -->
+
+
+
+    <!-- loader part  -->
+    <!-- <div class="loader-container">
+    <img src="/images/loader.gif" alt="">
+</div> -->
+
+    <%- include ('layouts/footer') -%>
